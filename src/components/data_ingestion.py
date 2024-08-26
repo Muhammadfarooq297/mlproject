@@ -8,8 +8,8 @@ from sklearn.model_selection import train_test_split  # Function to split datase
 from dataclasses import dataclass  # Decorator to create data classes
 
 # Importing Data Transformation and Model Trainer components
-# from src.components.data_transformation import DataTransformation
-# from src.components.data_transformation import DataTransformationConfig
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
 
 # from src.components.model_trainer import ModelTrainerConfig
 # from src.components.model_trainer import ModelTrainer
@@ -33,7 +33,7 @@ class DataIngestion:
         logging.info("Entered the data ingestion method or component")
         try:
             # Read data from a CSV file into a pandas DataFrame
-            df = pd.read_csv('notebook\data\stud.csv')  # # Can read it from any data sources i.e API's or data basses.
+            df = pd.read_csv('notebook\data\stud.csv')  # Can read it from any data sources i.e API's or data basses.
             logging.info('Read the dataset as dataframe')
 
             # In simpler terms, this part of the code is getting the directory 'artifacts' from the full path 'artifacts/train.csv' then making 'artifacts' directory.
@@ -74,11 +74,11 @@ if __name__ == "__main__":
     # Initiate data ingestion process and obtain paths for train and test data
     train_data, test_data = obj.initiate_data_ingestion()
 
-    # # Create an instance of DataTransformation class
-    # data_transformation = DataTransformation()
+    # Create an instance of DataTransformation class
+    data_transformation = DataTransformation()
 
-    # # Transform the data and obtain arrays for train and test data
-    # train_arr, test_arr, _ = data_transformation.initiate_data_transformation(train_data, test_data)
+    # Transform the data and obtain arrays for train and test data
+    data_transformation.initiate_data_transformation(train_data, test_data)
 
     # # Create an instance of ModelTrainer class
     # modeltrainer = ModelTrainer()
