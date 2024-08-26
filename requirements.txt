@@ -4,7 +4,7 @@ seaborn
 matplotlib
 scikit-learn
 ipykernel
-# catboost
-# xgboost
+catboost
+xgboost
 dill
 # -e .  # automatically trigger setup.py

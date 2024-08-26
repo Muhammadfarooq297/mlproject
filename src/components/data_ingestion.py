@@ -1,18 +1,17 @@
-import os  # Module to interact with the operating system
-import sys  # Module to access system-specific parameters and functions
-from src.exception import CustomException  # Custom exception handling class
-from src.logger import logging  # Custom logging configuration
-import pandas as pd  # Library for data manipulation and analysis
+import os
+import sys
+from src.exception import CustomException
+from src.logger import logging
+import pandas as pd
 
-from sklearn.model_selection import train_test_split  # Function to split dataset into train and test sets
-from dataclasses import dataclass  # Decorator to create data classes
+from sklearn.model_selection import train_test_split
+from dataclasses import dataclass
 
-# Importing Data Transformation and Model Trainer components
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 
-# from src.components.model_trainer import ModelTrainerConfig
-# from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
 
 # Define a data class to store the file paths for the data ingestion process
 @dataclass
@@ -78,10 +77,7 @@ if __name__ == "__main__":
     data_transformation = DataTransformation()
 
     # Transform the data and obtain arrays for train and test data
-    data_transformation.initiate_data_transformation(train_data, test_data)
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
 
-    # # Create an instance of ModelTrainer class
-    # modeltrainer = ModelTrainer()
-
-    # # Train the model and print the result
-    # print(modeltrainer.initiate_model_trainer(train_arr, test_arr))
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
