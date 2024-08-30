@@ -1,6 +1,6 @@
 # End to End Machine Learning Project
 
-## 🎓 End-to-End Machine Learning Project: **Predictive Analysis of Student Performance**  
+## **Predictive Analysis of Student Performance**  
 
 **_Languages:_** Python 🐍  
 **_Frameworks & Tools:_** Flask 🌐, Scikit-learn 📊, AWS ☁️, Azure ☁️, Docker 🐳, GitHub Actions ⚙️, CI/CD Pipelines 🚀
