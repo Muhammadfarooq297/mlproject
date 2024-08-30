@@ -1,6 +1,6 @@
-## End to End Machine Learning Project
+# End to End Machine Learning Project
 
-# Predictive Analysis of Student Performance *(Python, Scikit-learn, Flask, AWS, Azure, Docker, GitHub Actions, CI/CD Pipelines)*
+## Predictive Analysis of Student Performance *(Python, Scikit-learn, Flask, AWS, Azure, Docker, GitHub Actions, CI/CD Pipelines)*
 
 ## Problem Statement
 The objective of this project was to develop a machine learning model to predict student performance in math, reading, and writing based on demographic and educational factors such as gender, race/ethnicity, parental education level, lunch type, and test preparation course.
@@ -67,6 +67,3 @@ The objective of this project was to develop a machine learning model to predict
 - `models/`: Saved models and related scripts.
 - `notebooks/`: Jupyter notebooks for data analysis and model development.
 - `static/` and `templates/`: Static files and HTML templates for the web app.
-
-
-
